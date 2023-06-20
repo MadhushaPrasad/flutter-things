@@ -2,11 +2,23 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
       home: Scaffold(
-        backgroundColor: Color.fromARGB(255, 25, 5, 8),
-        body: Center(
-          child: Text("Centered Text"),
+        body: Container(
+          decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [Colors.blue, Colors.red])),
+          child: const Center(
+            child: Text(
+              "Centered Text",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 50,
+              ),
+            ),
+          ),
         ),
       ),
     ),
