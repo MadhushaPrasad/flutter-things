@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
 
-import './views/ServiceProvider.dart' as serviceProvider;
+import './views/ServiceProvidersView.dart' as serviceProviderView;
 
-void main() => runApp(const serviceProvider.ServiceProviderApp());
+void main() => runApp(const serviceProviderView.ServiceProvidersViewApp());

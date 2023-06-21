@@ -11,11 +11,21 @@ class UserServices {
     var _headers = {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'Authorization': "Bearer ${token}"
+      'Authorization': "Bearer $token"
     };
 
     String rawJson = jsonEncode(body);
     return await client.post(Uri.parse(service_providerURL),
         headers: _headers, body: rawJson);
+  }
+
+  Future<http.Response> getAllServiceProviders(String url, token) async {
+    var service_providerURL = baseURL.toString() + url;
+    var _headers = {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+      'Authorization': "Bearer $token"
+    };
+    return await client.get(Uri.parse(service_providerURL), headers: _headers);
   }
 }
